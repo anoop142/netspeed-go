@@ -67,8 +67,8 @@ func printStats(device string, up, down bool) {
 		upSpeed = 0
 	}
 	// convert to human friendly format
-	downSpeedString := humanize.Bytes(downSpeed)
-	upSpeedString := humanize.Bytes(upSpeed)
+	downSpeedString := humanize.Bytes(downSpeed) + "/s"
+	upSpeedString := humanize.Bytes(upSpeed) + "/s"
 
 	// print both if none specified
 	if (up && down) || (!up && !down) {
